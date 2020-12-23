@@ -1,0 +1,81 @@
+.HambMenu
+    position: fixed
+    top: 1rem
+    right: 3rem
+    width: 5.5rem
+    height: 4.5rem
+    border: 1px solid $white-color
+    border-radius: 3px
+    z-index: 900
+    background-color: rgba($black-color, 0.3)
+    @include size(sm)
+        display: none
+    &__item
+        width: 80%
+        height: 2px
+        border-radius: 3px
+        background-color: $white-color
+        display: block
+        margin: .92rem auto
+    &__item.rotate_top_in
+        animation: rotate_top_in
+        animation-duration: 1s
+        animation-fill-mode: forwards
+    &__item.rotate_top_out
+        animation: rotate_top_out
+        animation-duration: 1s
+        animation-fill-mode: forwards
+    &__item.rotate_bottom_in
+        animation: rotate_bottom_in
+        animation-duration: 1s
+        animation-fill-mode: forwards
+    &__item.rotate_bottom_out
+        animation: rotate_bottom_out
+        animation-duration: 1s
+        animation-fill-mode: forwards
+    &__item.fade_middle_in
+        animation: fade_middle_in
+        animation-duration: .5s
+        animation-fill-mode: forwards
+    &__item.fade_middle_out
+        animation: fade_middle_out
+        animation-duration: 2.5s
+        animation-fill-mode: forwards
+
+
+@keyframes rotate_top_in
+    0%
+        transform: translateY(0) rotateZ(0)
+    100%   
+        transform: translateY(11px) rotateZ(759deg)
+
+@keyframes rotate_top_out
+    0%
+        transform: translateY(12px) rotateZ(758deg)
+    100%   
+        transform: translateY(0) rotateZ(0)
+
+@keyframes rotate_bottom_in
+    0%
+        transform: translateY(0) rotateZ(0)
+    100%   
+        transform: translateY(-11px) rotateZ(681deg)
+
+@keyframes rotate_bottom_out
+    0%
+        transform: translateY(-12px) rotateZ(858deg)
+    100%   
+        transform: translateY(0) rotateZ(0)
+
+@keyframes fade_middle_in
+    0% 
+        opacity: 1
+    100%   
+        opacity: 0
+ 
+
+@keyframes fade_middle_out
+    0%
+        opacity: 0
+    100%   
+        opacity: 1

@@ -1,0 +1,101 @@
+.Projects
+    @include page
+    background-color: $page-silver-color
+    &__holder
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+    &__title-holder
+        @include page-title-holder
+    &__title
+        @include title
+    .projects-page-icon
+        @include icon
+        width: 3.5rem
+        height: 3.5rem
+        display: block
+        background-image: url('../assets/icons/code.svg')
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(19deg) brightness(103%) contrast(101%)
+
+.Project
+    width: 100%
+    max-width: 22rem
+    position: relative
+    margin-bottom: 5rem
+    perspective: 500px
+    backface-visibility: hidden
+    &__holder
+        border-radius: 5px
+        overflow: hidden
+        transition: transform 0.3s
+    &__img
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        &__item
+            width: 100%
+            transform: scale(1.02)
+            transition: transform .3s
+    &__content
+        padding: 2rem .5rem
+        background-color: $polar-color
+        position: relative
+        backface-visibility: hidden
+        &__title
+            position: absolute
+            top: -1.5rem
+            left: 50%
+            transform: translateX(-50%)
+            background-color: green
+            padding: .5rem 2rem
+            color: $white-color
+            border-radius: 3px
+            white-space: nowrap
+            backface-visibility: hidden
+            cursor: context-menu
+        &__links
+            display: flex
+            flex-direction: column
+            padding: 0 2rem
+        &__link
+            text-decoration: none
+            color: $link-color
+            font-size: 1.4rem
+        &__github
+            margin-bottom: 1rem
+            position: relative
+            margin-left: -1.8rem
+            &:hover
+                text-decoration: underline
+            &:before
+                content: url("../assets/icons/github.svg")
+                width: 20px
+                display: inline-block
+                margin-right: 1rem
+                vertical-align: middle
+        &__live
+            position: relative
+            margin-left: -1.2rem
+            &:hover
+                text-decoration: underline
+            &:before
+                content: ""
+                display: inline-block
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background-color: green
+                vertical-align: middle
+                margin-right: 1.4rem
+
+        &__tech
+            padding: 1.2rem 0
+            white-space: nowrap
+            color: $link-color
+            cursor: context-menu
+            span
+                font-size: 2.2rem
+                color: green
+
+            

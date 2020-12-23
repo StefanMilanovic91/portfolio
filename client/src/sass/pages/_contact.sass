@@ -1,0 +1,117 @@
+.Contact
+    @include page
+    background-color: $page-silver-color
+    z-index: 0
+    &__holder
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+    &__title-holder
+        @include page-title-holder
+    &__title
+        @include title
+    .contact-page-icon
+        @include icon
+        width: 3.5rem
+        height: 3.5rem
+        display: block
+        background-image: url('../assets/icons/envelope.svg')
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(19deg) brightness(103%) contrast(101%)
+
+    .Form
+        width: 80%
+        padding-bottom: 6rem
+        .form-group-holder
+            justify-content: space-between
+        .form-group
+            position: relative
+            width: 45%
+        
+            
+        .form-control
+            background-color: transparent
+            outline: none
+            border: 2px solid $link-color
+            transition: all .3s
+            width: 100%
+            padding: 1rem
+            color: white
+            font-size: 1.8rem
+            border-radius: 3px
+            z-index: 1
+            position: relative
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus
+                -webkit-box-shadow: 0 0 0px 1000px $page-silver-color inset
+                -webkit-text-fill-color: white
+                transition: background-color 5000s ease-in-out 0s
+            &:focus
+                outline: none
+                border: 2px solid $polar-color
+                + .label
+                    top: -2.5rem
+                    left: 0
+                    font-size: 1.4rem
+        .text-area
+            width: 100%
+            position: relative
+        .label
+            position: absolute
+            top: 1.2rem
+            left: 1rem
+            color: #e1e1e1
+            transition: all .2s
+            z-index: 0
+        .visited
+            top: -2.5rem
+            left: 0
+            font-size: 1.4rem
+            
+
+
+    .btn
+        position: relative
+        padding: 1rem 3rem
+        margin-top: 3rem
+        background-color: transparent
+        outline: none
+        border: 2px solid $green-color 
+        margin: 3rem auto 0
+        display: block
+        text-transform: uppercase
+        color: $green-color
+        cursor: pointer
+        font-weight: 700
+        font-size: 1.6rem
+        z-index: 100
+        transition: color .3s
+        &:after
+            content: ""
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 0
+            height: 98%
+            background-color: #6ac045
+            opacity: 0
+            transition: all .3s
+            z-index: -1
+        &:hover
+            color: $sidebar-silver-color
+            &:after
+                top: 1px
+                width: 99%
+                opacity: 1
+.form-title
+    display: flex
+    justify-content: center        
+    h3
+        font-size: 2.5rem
+        font-weight: 300
+        text-transform: uppercase
+        border-bottom: 1px dotted $green-color
+        color: $green-color
+        padding-bottom: 1rem
+

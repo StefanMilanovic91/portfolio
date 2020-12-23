@@ -1,0 +1,56 @@
+
+@mixin size($size)
+
+    @if $size == sm
+        @media screen and (min-width: 576px)
+            @content 
+
+    @if $size == md
+        @media screen and (min-width: 768px)
+            @content 
+
+    @if $size == lg
+        @media screen and (min-width: 992px)
+            @content 
+
+    @if $size == xl
+        @media screen and (min-width: 1200px)
+            @content 
+
+
+@mixin bottom-line($width)
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: $width
+    border-bottom: 2px solid $green-color
+
+@mixin page
+    position: absolute
+    width: 100%
+    min-height: 100vh
+
+@mixin icon
+    width: 2.5rem
+    height: 2.5rem
+    background-repeat: no-repeat
+    background-size: 100%
+    filter: invert(48%) sepia(4%) saturate(11%) hue-rotate(354deg) brightness(97%) contrast(91%)
+    
+@mixin page-title-holder
+    padding-top: 7rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 2rem 0 2rem
+    border-bottom: 1px dotted $green-color
+    @include size(lg)
+        max-width: 75rem
+    @include size(xl)
+        max-width: 95rem
+
+@mixin title
+    color: $green-color
+    font-weight: 400
+    font-size: 4rem

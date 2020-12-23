@@ -1,0 +1,96 @@
+.Skills
+    @include page
+    background-color: $page-silver-color
+    &__title-holder
+        @include page-title-holder 
+    &__title
+        @include title
+    .skills-page-icon
+        @include icon
+        display: block
+        background-image: url('../assets/icons/cog.svg')
+        animation: rotate 2s infinite
+        animation-timing-function: linear
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(19deg) brightness(103%) contrast(101%)
+    &__content
+        padding: 3rem
+        @include size(sm)
+            padding: 3rem 5rem
+        @include size(md)
+            padding: 3rem 10rem
+        &__item
+            display: flex
+            align-items: flex-end
+            margin-bottom: 3rem
+            border-bottom: 1px dotted $white-color
+            min-height: 6.6rem
+            &:nth-of-type(1)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .2s 
+                    animation-fill-mode: forwards
+            &:nth-of-type(2)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .3s
+                    animation-fill-mode: forwards
+            &:nth-of-type(3)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .4s
+                    animation-fill-mode: forwards
+            &:nth-of-type(4)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .5s
+                    animation-fill-mode: forwards
+            &:nth-of-type(5)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .6s
+                    animation-fill-mode: forwards
+            &:nth-of-type(6)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .7s
+                    animation-fill-mode: forwards
+            &:nth-of-type(7)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .8s
+                    animation-fill-mode: forwards
+            &:nth-of-type(8)
+                .Skills__content__img
+                    animation-name: slide-from-right
+                    animation-duration: 1s
+                    animation-delay: .9s
+                    animation-fill-mode: forwards
+        &__title
+            font-weight: 300
+            color: $white-color
+        &__img
+            width: 4rem
+            margin-bottom: .5rem
+            transform: translateX(50rem)
+            @include size(md)
+               width: 6rem
+        
+            
+@keyframes slide-from-right
+    70%
+        transform: translateX(-1.5rem)
+    100%
+        transform: translateX(0)
+
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

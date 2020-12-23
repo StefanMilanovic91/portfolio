@@ -1,0 +1,64 @@
+.Welcome
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $page-silver-color
+    z-index: 10000
+    h2
+        text-transform: uppercase
+        font-family: 'Langar', cursive
+        text-align: center
+        color: $white-color
+        font-weight: bold
+        letter-spacing: 5px
+        span
+            font-size: 4rem
+    &__loader
+        display: flex
+        justify-content: center
+        span
+            width: 1.2rem
+            height: 1.2rem
+            border-radius: 50%
+            margin: .5rem .3rem
+            animation-direction: alternate
+            &:nth-of-type(1)
+                background-color: #007DB6
+                animation: loader-animation 2s infinite
+            &:nth-of-type(2)
+                background-color: #008FB2
+                animation: loader-animation 2s infinite
+                animation-delay: .2s
+            &:nth-of-type(3)
+                background-color: #009B9E
+                animation: loader-animation 2s infinite
+                animation-delay: .3s
+            &:nth-of-type(4)
+                background-color: #00A77D
+                animation: loader-animation 2s infinite
+                animation-delay: .4s
+            &:nth-of-type(5)
+                background-color: #00B247
+                animation: loader-animation 2s infinite
+                animation-delay: .5s
+            &:nth-of-type(6)
+                background-color: #5AB027
+                animation: loader-animation 2s infinite
+                animation-delay: .6s
+            &:nth-of-type(7)
+                background-color: #A0B61E
+                animation: loader-animation 2s infinite
+                animation-delay: .7s
+
+@keyframes loader-animation
+    0%
+        opacity: 1
+    15%
+        opacity: 0
+    100%
+        opacity: 1
