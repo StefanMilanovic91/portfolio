@@ -5,15 +5,18 @@ import { GlobalContext } from '../../../GlobalContext/GlobalContext';
 
 const Home = () => {
 
-    const {globalState: { welcomeRender }, getContainerHeight} = useContext(GlobalContext);
+    const container = useRef();
+
+    const {globalState: { welcomeRender }, getContainerHeight, GetCurrentWidth} = useContext(GlobalContext);
     
     const [visible, setVisible] = useState(true);
     const [title, setTitle] = useState('Web Developer');
     const [style, setStyle] = useState({"width": "265px"})
     
-    const container = useRef();
+    const currentWidth = GetCurrentWidth();
 
-    useEffect(() => getContainerHeight(container.current.clientHeight), []);
+    
+    useEffect(() => getContainerHeight(container.current.clientHeight), [currentWidth]);
 
     useEffect(() => {
         if (!welcomeRender) {

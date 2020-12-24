@@ -5,8 +5,8 @@ import icons from './icons';
 const Skills = () => {
 
     const container = useRef();
-    const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
 
+    const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
     const currentWidth = GetCurrentWidth();
     
     useEffect(() => getContainerHeight(container.current.clientHeight), [currentWidth]);

@@ -5,6 +5,7 @@ import { GlobalContext } from '../../../GlobalContext/GlobalContext';
 const About = () => {
 
     const container = useRef();
+    
     const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
     const currentWidth = GetCurrentWidth();
 

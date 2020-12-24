@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { Switch, Redirect, Route, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
@@ -14,14 +14,13 @@ const SwitchRoutes = ({ location }) => {
 
     const { globalState: { containerHeight } } = useContext(GlobalContext);
 
-
     return (
         <Fragment>
            
-            <TransitionGroup style={{"height": containerHeight + 'px'}} className="page-holder">
+            <TransitionGroup style={{"minHeight": containerHeight + 'px'}} className='page-holder'>
                 <CSSTransition
                     key={location.key}
-                    timeout={1000}
+                    timeout={1200}
                 >
                     <Switch location={location}>
                         

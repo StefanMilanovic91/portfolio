@@ -26,7 +26,7 @@ html, body {
   width: 100%;
   min-height: 100vh;
   margin-left: auto;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 576px) {
@@ -56,8 +56,8 @@ html, body {
 .exit.exit-active {
   -webkit-animation-name: page-transition;
           animation-name: page-transition;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
