@@ -1508,7 +1508,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 98%;
+  height: 97%;
   background-color: #6ac045;
   opacity: 0;
   transition: all .3s;

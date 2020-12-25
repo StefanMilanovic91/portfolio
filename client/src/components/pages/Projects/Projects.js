@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useContext } from 'react';
-import { withRouter } from 'react-router-dom';
 
 import { GlobalContext } from '../../../GlobalContext/GlobalContext';
 import Project from './Project/Project';
@@ -14,7 +13,10 @@ const Projects = () => {
     const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
     const currentWidth = GetCurrentWidth();
 
-    useEffect(() => setTimeout(() => getContainerHeight(container.current.clientHeight), 150), [currentWidth]);
+    useEffect(() => {
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 150);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentWidth]);
     
     
     return (

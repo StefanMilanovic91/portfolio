@@ -7,5 +7,6 @@ import mongodb_icon from '../../../assets/icons/mng.png';
 import express_icon from '../../../assets/icons/express.png';
 import nodejs_icon from '../../../assets/icons/node.png';
 
+const icons = { html_icon, css_icon,sass_icon,js_icon,react_icon,mongodb_icon,express_icon,nodejs_icon }
 
-export default { html_icon, css_icon,sass_icon,js_icon,react_icon,mongodb_icon,express_icon,nodejs_icon };
+export default icons;
