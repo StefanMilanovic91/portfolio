@@ -2,6 +2,7 @@ const express = require('express');
 const sgMail = require('@sendgrid/mail');
 const { check, validationResult } = require('express-validator');
 const path = require('path');
+const expressStaticGzip = require("express-static-gzip");
 require("dotenv").config();
 
 
@@ -11,11 +12,13 @@ app.use(express.json({ extended: false }));
 
 if (process.env.NODE_ENV === 'production') {
 
+    app.use(expressStaticGzip(path.join(__dirname, 'client/build')));
+
     //set static folder
-    app.use(express.static('client/build'));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
     })
 }
 
