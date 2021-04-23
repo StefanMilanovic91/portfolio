@@ -34,4 +34,3 @@ const App = () => {
 }
 
 export default App
-// https://watson-vcard.netlify.app/index-dark.html

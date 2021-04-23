@@ -14,7 +14,7 @@ const Projects = () => {
     const currentWidth = GetCurrentWidth();
 
     useEffect(() => {
-        setTimeout(() => getContainerHeight(container.current.clientHeight), 150);
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 1700);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentWidth]);
     

@@ -16,7 +16,10 @@ const Home = () => {
     const currentWidth = GetCurrentWidth();
 
     
-    useEffect(() => getContainerHeight(container.current.clientHeight), [currentWidth]);
+    useEffect(() => {
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 1700);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentWidth]);
 
     useEffect(() => {
         if (!welcomeRender) {

@@ -30,16 +30,15 @@ html, body
         width: 85%
 .exit.exit-active
     animation-name: page-transition
-    animation-duration: 1.3s 
+    animation-duration: 1.3s
+    animation-delay: .2s
     animation-timing-function: ease-in-out
 ::selection
     background-color: $green-color
     color:  $white-color
 
 @keyframes page-transition
-    35%
-        opacity: 1
+    40%
         transform: translateY(30px)
     100%
-        opacity: 0
         transform: translateY(-100%)

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { GlobalContext } from '../../../GlobalContext/GlobalContext';
-import icons from './icons';
 
 const Skills = () => {
 
@@ -9,7 +8,10 @@ const Skills = () => {
     const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
     const currentWidth = GetCurrentWidth();
     
-    useEffect(() => getContainerHeight(container.current.clientHeight), [currentWidth]);
+    useEffect(() => {
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 1700);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentWidth]);
 
     return (
         <div ref={container} className="Skills" >
@@ -23,36 +25,25 @@ const Skills = () => {
                 <div className="Skills__content" >
                 <div className="Skills__content__item">
                     <h3 className="Skills__content__title">HTML</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.html_icon} alt="html" />
+                    <img className="Skills__content__img d-block ml-auto" src="icons/html.png" alt="html" />
                 </div>
                 <div className="Skills__content__item">
                     <h3 className="Skills__content__title">CSS</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.css_icon} alt="css" />
+                    <img className="Skills__content__img d-block ml-auto" src="icons/css.png" alt="Css" />
                 </div>
                 <div className="Skills__content__item">
                     <h3 className="Skills__content__title">SASS</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.sass_icon} alt="sass" />
+                    <img className="Skills__content__img d-block ml-auto" src="icons/sass.png" alt="Sass" />
                 </div>
                 <div className="Skills__content__item">
                     <h3 className="Skills__content__title">JavaScript</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.js_icon} alt="javascript" />
-                </div>
-                <div className="Skills__content__item">
-                    <h3 className="Skills__content__title">Mongo DB</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.mongodb_icon} alt="mongodb" />
-                </div>
-                <div className="Skills__content__item">
-                    <h3 className="Skills__content__title">Express JS</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.express_icon} alt="express" />
+                    <img className="Skills__content__img d-block ml-auto" src="icons/js.png" alt="JavaScript" />
                 </div>
                 <div className="Skills__content__item">
                     <h3 className="Skills__content__title">React</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.react_icon} alt="react" />
+                    <img className="Skills__content__img d-block ml-auto" src="icons/react.png" alt="React" />
                 </div>
-                <div className="Skills__content__item">
-                    <h3 className="Skills__content__title">Node JS</h3>
-                    <img className="Skills__content__img d-block ml-auto" src={icons.nodejs_icon} alt="nodejs" />
-                </div>
+                
 
                 </div>
             </div>

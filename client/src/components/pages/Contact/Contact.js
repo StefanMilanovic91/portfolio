@@ -11,7 +11,10 @@ const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', msg: '' });
     const [responseMsg, setResponseMsg] = useState([])
 
-    useEffect(() => getContainerHeight(container.current.clientHeight), []);
+    useEffect(() => {
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 1700);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const submit = async (e) => {
         e.preventDefault();

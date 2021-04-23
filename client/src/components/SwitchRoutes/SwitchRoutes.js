@@ -6,21 +6,21 @@ import { GlobalContext } from '../../GlobalContext/GlobalContext';
 
 import Home from '../pages/Home/Home';
 import Skills from '../pages/Skills/Skills';
-import Projects from '../pages/Projects/Projects';
 import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
+import Projects from '../pages/Projects/Projects';
 
 const SwitchRoutes = ({ location }) => {
 
     const { globalState: { containerHeight } } = useContext(GlobalContext);
-
+    
     return (
         <Fragment>
            
             <TransitionGroup style={{"minHeight": containerHeight + 'px'}} className='page-holder'>
                 <CSSTransition
                     key={location.key}
-                    timeout={1200}
+                    timeout={1500}
                 >
                     <Switch location={location}>
                         
@@ -28,9 +28,10 @@ const SwitchRoutes = ({ location }) => {
 
                         <Route path="/home" component={Home} />
                         <Route path="/skills" component={Skills} />
-                        <Route path="/projects" component={Projects} />
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={Contact} />
+
+                        <Route path="/projects" component={Projects} />
                         
                     </Switch>
                 </CSSTransition>

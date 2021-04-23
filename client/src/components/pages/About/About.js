@@ -9,7 +9,10 @@ const About = () => {
     const { getContainerHeight, GetCurrentWidth } = useContext(GlobalContext);
     const currentWidth = GetCurrentWidth();
 
-    useEffect(() => getContainerHeight(container.current.clientHeight), [currentWidth]);
+    useEffect(() => {
+        setTimeout(() => getContainerHeight(container.current.clientHeight), 1700);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentWidth]);
 
     return (
         <div ref={container} className="About">
@@ -24,8 +27,8 @@ const About = () => {
                     <div className="About__paragraph">
                         <h3 className="About__sub-title mb-6">Just a little about me</h3>
                         <p className="About__paragraph__content mb-3" >
-                            My name is Stefan Milanovic from Serbia and I am 30 years old.
-                            I have been learning and upgrading my web development skills for many years, specifically the MERN stack.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex officia vitae aliquam totam quas,
+                            quos at doloremque, pariatur, culpa consectetur asperiores eum sunt. Quasi et quaerat ea itaque reiciendis?
                         </p>
                         <p className="About__paragraph__content" >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex officia vitae aliquam totam quas,
