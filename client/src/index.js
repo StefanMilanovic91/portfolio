@@ -5,7 +5,7 @@ import { GlobalProvider } from './GlobalContext/GlobalContext';
 
 import App from './App'; 
 
-import './css/main.css';
+import './css/main.min.css';
 
 
 ReactDOM.render(
